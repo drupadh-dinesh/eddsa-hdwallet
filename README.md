@@ -39,7 +39,7 @@ import (
 	"crypto/ed25519"
 	"fmt"
 
-	"github.com/drupadh-dinesh/eddsa-hdwallet"
+	hdwallet "github.com/drupadh-dinesh/eddsa-hdwallet"
 )
 
 func main() {
@@ -80,7 +80,7 @@ Seed lengths between 16 and 64 bytes are supported.
 ### Hardened Derivation
 
 ```go
-child, err := master.Derive(eddsa-hdwallet.Hardened(0))
+child, err := master.Derive(hdwallet.Hardened(0))
 ```
 
 ### Non-Hardened Derivation

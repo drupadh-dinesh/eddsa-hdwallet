@@ -1,13 +1,5 @@
 # eddsa-hdwallet
 
-⚠️ Experimental Software
-
-This project is an experimental implementation of Ed25519-BIP32 hierarchical deterministic wallets written in Go.
-
-This code has not been audited and should not be used to secure production funds, cryptocurrency wallets, or other high-value assets.
-
-The implementation is provided for educational, research, interoperability testing, and open-source experimentation purposes.
-
 `eddsa-hdwallet` is a Go implementation of hierarchical deterministic (HD) wallets for Ed25519 using the Ed25519-BIP32 derivation scheme.
 
 The package provides deterministic key generation from a seed, hardened and non-hardened child derivation, public derivation support, path-based derivation, signing, and serialization of extended keys.
@@ -226,6 +218,12 @@ Master Public Key:
 ```text
 672cee7ab7a38df97244109abd4aafb28593d6bef3735256ccf6f90e8537db59
 ```
+
+## Security Notice
+
+This project has not yet undergone an independent security audit. If you discover a security vulnerability, cryptographic issue, or any behavior that appears incorrect, please report it by opening a GitHub Issue or contacting the maintainer.
+
+This project welcomes security reviews, bug reports, interoperability testing, and contributions from the community.
 
 ## License
 

@@ -1,18 +1,35 @@
 # Security Policy
 
-## Security Status
+Thank you for helping improve the security of `eddsa-hdwallet`.
 
-This project is experimental and unaudited.
+## Reporting a Vulnerability
 
-No guarantees are made regarding:
+If you believe you have found a security vulnerability, cryptographic weakness, or implementation bug, please report it.
 
-- Cryptographic correctness
-- Compatibility with other implementations
-- Resistance to side-channel attacks
-- Production readiness
+You can:
 
-Do not use this software to protect real funds.
+- Open a GitHub Issue if the vulnerability is not sensitive.
+- For sensitive or embargoed vulnerabilities, contact the maintainer privately before public disclosure.
 
-## Reporting Issues
+Please include:
 
-If you discover a bug, vulnerability, or interoperability issue, please open a GitHub issue or security report.
+- A description of the issue.
+- Steps to reproduce the problem.
+- A proof of concept or test case, if available.
+- The affected version or commit.
+
+## Responsible Disclosure
+
+Please allow reasonable time for the issue to be investigated and addressed before publicly disclosing vulnerabilities.
+
+Security reports, cryptographic reviews, interoperability testing, and general feedback are greatly appreciated.
+
+## Scope
+
+This policy covers the source code in this repository, including:
+
+- Key derivation
+- Extended key serialization
+- Signing and verification
+- Path derivation
+- Public key derivation

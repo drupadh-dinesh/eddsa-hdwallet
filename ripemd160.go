@@ -26,7 +26,7 @@ func ripemd160(message []byte) [20]byte {
 		al, bl, cl, dl, el := h0, h1, h2, h3, h4
 		ar, br, cr, dr, er := h0, h1, h2, h3, h4
 
-		for j := 0; j < 80; j++ {
+		for j := range 80 {
 			t := bitsRotateLeft32(al+f(j, bl, cl, dl)+x[rl[j]]+kl(j), sl[j]) + el
 			al, el, dl, cl, bl = el, dl, bitsRotateLeft32(cl, 10), bl, t
 

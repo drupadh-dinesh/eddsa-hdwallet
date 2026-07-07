@@ -304,17 +304,15 @@ func TestConcurrentUseIsDeterministic(t *testing.T) {
 
 	results := make(chan string, workers)
 	var wg sync.WaitGroup
-	for i := 0; i < workers; i++ {
-		wg.Add(1)
-		go func() {
-			defer wg.Done()
+	for range workers {
+		wg.Go(func() {
 			child, err := key.DerivePath("m/44'/0'/0'/0/1")
 			if err != nil {
 				t.Errorf("DerivePath: %v", err)
 				return
 			}
 			results <- hex.EncodeToString(child.PublicKey())
-		}()
+		})
 	}
 	wg.Wait()
 	close(results)

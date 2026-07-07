@@ -153,7 +153,7 @@ func scalarTweakFromZ(z []byte) (*edwards25519.Scalar, error) {
 	}
 	var shifted [32]byte
 	var carry uint16
-	for i := 0; i < 28; i++ {
+	for i := range 28 {
 		v := uint16(z[i])<<3 | carry
 		shifted[i] = byte(v)
 		carry = v >> 8
@@ -169,7 +169,7 @@ func scalarTweakFromZ(z []byte) (*edwards25519.Scalar, error) {
 func add256(a, b []byte) []byte {
 	out := make([]byte, 32)
 	var carry uint16
-	for i := 0; i < 32; i++ {
+	for i := range 32 {
 		sum := uint16(a[i]) + uint16(b[i]) + carry
 		out[i] = byte(sum)
 		carry = sum >> 8
